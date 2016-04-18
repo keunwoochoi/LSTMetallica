@@ -13,10 +13,10 @@ A LSTM network that learns from the drum tracks of Metallica and generates new t
  * [This playlist](https://soundcloud.com/kchoi-research/sets/lstmetallica-drums) or and [this](https://soundcloud.com/kchoi-research/00-24-100-bonus-for-score) are the generated drum tracks on soundcloud.
  * Also there's my another similar work on jazz chord progression [repository](https://github.com/keunwoochoi/lstm_real_book/blob/master/README.md), [blog post](https://keunwoochoi.wordpress.com/2016/02/19/lstm-realbook/), [soundcloud](https://soundcloud.com/kchoi-research/sets/lstm-realbook-1-5)
 
-#### run and learn
+#### Run and learn
  * Run the code, `main_lstM_etallica.py`
 
-#### even more
+#### Even more
 * [This text file](https://github.com/keunwoochoi/LSTMetallica/blob/master/metallica_drums_text.txt) is an aggregated-and-encoded text file for Metallica's drum tracks.
  * [This folder](https://github.com/keunwoochoi/LSTMetallica/tree/master/Metallica_drums_midi) contains the original drum midi tracks.
  * Feel free to use these. **Citing is caring!**
