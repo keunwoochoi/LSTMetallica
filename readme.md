@@ -16,7 +16,7 @@ A LSTM network that learns from the drum tracks of Metallica and generates new t
 ### run and learn
  * [This text file](https://github.com/keunwoochoi/LSTMetallica/blob/master/metallica_drums_text.txt) is an aggregated-and-encoded text file for Metallica's drum tracks.
  * [This folder](https://github.com/keunwoochoi/LSTMetallica/tree/master/Metallica_drums_midi) contains the original drum midi tracks.
- * Or just run the code, main_lstM_etallica.py
+ * Or just run the code, `main_lstM_etallica.py`
 
 ### Citation
 **Text-based LSTM networks for Automatic Music Composition**, Keunwoo Choi, George Fazekas, Mark Sandler, *1st Conference on Computer Simulation of Musical Creativity*, Huddersfield, UK, 2016 [pdf](https://drive.google.com/open?id=0B8uiKWlnL9qDeVVCb25rRjJWRWc)
