@@ -9,8 +9,8 @@ A LSTM network that learns from the drum tracks of Metallica and generates new t
 
 #### Usage
  * Clond the repo
- * `$ python main_lstM_etallica.py`
- * `$ python main_post_process.py` - this is when you need [python-midi](https://github.com/vishnubob/python-midi)
+ * `$ python main_lstM_etallica.py` to get generated drum track in text file
+ * text->midi: `$ python main_post_process.py` - this is when you need [python-midi](https://github.com/vishnubob/python-midi)
  * Use [this text file](https://github.com/keunwoochoi/LSTMetallica/blob/master/metallica_drums_text.txt), an aggregated-and-encoded text file for Metallica's drum tracks, to do something more
  * [This folder](https://github.com/keunwoochoi/LSTMetallica/tree/master/Metallica_drums_midi) contains the original drum midi tracks.
  
