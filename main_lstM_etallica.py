@@ -110,7 +110,7 @@ def run(is_character=False, maxlen=None, num_units=None, model_prefix=''):
 		pass
 
 	# train the model, output generated text after each iteration
-	batch_size = 1024
+	batch_size = 128
 	loss_history = []
 	pt_x = [1,29,30,40,100,100,200,300,400]
 	nb_epochs = [np.sum(pt_x[:i+1]) for i in range(len(pt_x))]
