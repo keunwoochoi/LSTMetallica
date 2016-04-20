@@ -1,25 +1,18 @@
-'''Example script to generate text from Nietzsche's writings.
-
-At least 20 epochs are required before the generated text
-starts sounding coherent.
-
-It is recommended to run this script on GPU, as recurrent
-networks are quite computationally intensive.
-
-If you try this script on new data, make sure your corpus
-has at least ~100k characters. ~1M is better.
+'''
+LSTMetallica by Keunwoo Choi
+ - paper: https://arxiv.org/abs/1604.05358#
+ - repo:  https://github.com/keunwoochoi/LSTMetallica 
 '''
 from keras.models import Sequential
 from keras.layers.core import Dense, Activation, Dropout
 from keras.layers.recurrent import LSTM
-from keras.datasets.data_utils import get_file
+from keras.utils.data_utils import get_file
 import keras
 import numpy as np
 import random
 import sys
 import os
 import pdb
-
 
 def sample(a, temperature=1.0):
 	# helper function to sample an index from a probability array
@@ -124,7 +117,6 @@ def run(is_character=False, maxlen=None, num_units=None, model_prefix=''):
 
 	# not random seed, but the same seed for all.
 	start_index = random.randint(0, len(text) - maxlen - 1)
-
 
 	for iteration, nb_epoch in zip(pt_x,nb_epochs):
 		if os.path.exists('stop_asap.keunwoo'):
