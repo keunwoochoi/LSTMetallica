@@ -14,6 +14,22 @@ import sys
 import os
 import pdb
 
+def get_model(maxlen, num_chars, num_layers):
+	print('Build model...')
+	model = Sequential()
+	for layer_idx in range(num_layers):
+		if layer_idx == 0:
+			model.add(LSTM(num_units, return_sequences=True, input_shape=(maxlen, num_chars)))
+		else:
+			model.add(LSTM(num_units, return_sequences=False))
+		model.add(Dropout(0.2))
+
+	model.add(Dense(num_chars))
+	model.add(Activation('softmax'))
+
+	model.compile(loss='categorical_crossentropy', optimizer='adam')
+	return model
+
 def sample(a, temperature=1.0):
 	# helper function to sample an index from a probability array
 	a = np.log(a) / temperature
@@ -82,19 +98,7 @@ def run(is_character=False, maxlen=None, num_units=None, model_prefix=''):
 		y[i, char_indices[next_chars[i]]] = 1
 
 	# build the model: 2 stacked LSTM
-	print('Build model...')
-	model = Sequential()
-	for layer_idx in range(num_layers):
-		if layer_idx == 0:
-			model.add(LSTM(num_units, return_sequences=True, input_shape=(maxlen, num_chars)))
-		else:
-			model.add(LSTM(num_units, return_sequences=False))
-		model.add(Dropout(0.2))
-
-	model.add(Dense(num_chars))
-	model.add(Activation('softmax'))
-
-	model.compile(loss='categorical_crossentropy', optimizer='adam')
+	model = get_model(maxlen, num_chars, num_layers)
 
 	result_directory = 'result_%s_%s_%d_%d_units/' % (prefix, model_prefix, maxlen, num_units)
 	filepath_model = '%sbest_model.hdf' % result_directory
@@ -129,7 +133,6 @@ def run(is_character=False, maxlen=None, num_units=None, model_prefix=''):
 		while batch_size_not_decided:
 			result = model.fit(X, y, batch_size=batch_size, nb_epoch=nb_epoch, callbacks=[checker, early_stop]) 
 			loss_history = loss_history + result.history['loss']
-			
 			
 		print 'Saving model after %d epochs...' % nb_epoch
 		model.save_weights('%smodel_after_%d.hdf'%(result_directory, nb_epoch), overwrite=True)
