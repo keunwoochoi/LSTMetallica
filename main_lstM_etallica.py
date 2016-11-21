@@ -129,10 +129,9 @@ def run(is_character=False, maxlen=None, num_units=None, model_prefix=''):
 
 		print('-' * 50)
 		print('Iteration', iteration)
-		batch_size_not_decided = True
-		while batch_size_not_decided:
-			result = model.fit(X, y, batch_size=batch_size, nb_epoch=nb_epoch, callbacks=[checker, early_stop]) 
-			loss_history = loss_history + result.history['loss']
+		
+		result = model.fit(X, y, batch_size=batch_size, nb_epoch=nb_epoch, callbacks=[checker, early_stop]) 
+		loss_history = loss_history + result.history['loss']
 			
 		print 'Saving model after %d epochs...' % nb_epoch
 		model.save_weights('%smodel_after_%d.hdf'%(result_directory, nb_epoch), overwrite=True)
