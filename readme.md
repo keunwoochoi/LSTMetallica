@@ -20,5 +20,5 @@ A LSTM network that learns from the drum tracks of Metallica and generates new t
  * Similar work on jazz chord progression: [github repository](https://github.com/keunwoochoi/lstm_real_book), [blog post](https://keunwoochoi.wordpress.com/2016/02/19/lstm-realbook/), [soundcloud](https://soundcloud.com/kchoi-research/sets/lstm-realbook-1-5)
 
 ### Citation
-**Text-based LSTM networks for Automatic Music Composition**, Keunwoo Choi, George Fazekas, Mark Sandler, *1st Conference on Computer Simulation of Musical Creativity*, Huddersfield, UK, 2016, [arXiv](https://arxiv.org/abs/1604.05358#), [pdf](https://arxiv.org/pdf/1604.05358v1)
+**Text-based LSTM networks for Automatic Music Composition**, Keunwoo Choi, George Fazekas, Mark Sandler, *1st Conference on Computer Simulation of Musical Creativity*, Huddersfield, UK, 2016, [arXiv](https://arxiv.org/abs/1604.05358#), [pdf](https://arxiv.org/pdf/1604.05358v1), [bib](https://scholar.googleusercontent.com/citations?view_op=export_citations&user=ZrqdSu4AAAAJ&s=ZrqdSu4AAAAJ:MXK_kJrjxJIC&citsig=AMstHGQAAAAAWIjj06BhKkBaBGcqMR__UBSLuabfKgOR&hl=en&cit_fmt=0)
 
