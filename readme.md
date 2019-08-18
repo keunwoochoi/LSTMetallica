@@ -1,8 +1,9 @@
-#LSTMetallica
+# LSTMetallica
 
 A LSTM network that learns from the drum tracks of Metallica and generates new tracks.
 
 #### Prequisite
+ * Python 2.7. Some of the codes would mis-behave with Python 3. 
  * [keras](https://github.com/fchollet/keras), a deeplearning framework
  * [python-midi](https://github.com/vishnubob/python-midi), to get midi file
  * numpy,  probably you already have it.
